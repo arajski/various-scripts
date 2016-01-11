@@ -72,7 +72,7 @@ function loadFile(fileName,db,collection) {
 
 		batchDocuments[index % batchNumber] = insertObject;
 	    if((index + 1) % batchNumber == 0) {
-	    	//collection.insert(batchDocuments);
+	    	collection.insert(batchDocuments);
 	    	batchDocuments = [];
 	    }
 	    index++;
@@ -107,8 +107,6 @@ MongoClient.connect(url, function (err, db) {
   } else {
   	var collection = db.collection('songs');
 	var start = new Date();
-	//loadFile(files[28],db,collection,tracks);
-	//Jeśli nie wyrabia pamięć to powyższą metodą wrzucaj pojedyncze pliki
   	for(var i = 1; i<files.length; i++) {
   	 	loadFile(files[i],db,collection); 	
   	}
