@@ -1,0 +1,16 @@
+{
+  "name": "tweets",
+  "version": "1.0.0",
+  "description": "Scripts used to collect tweets",
+  "main": "twitterCollector.js",
+  "scripts": {
+    "start": "node twitterCollector.js"
+  },
+  "author": "Artur Rajski",
+  "license": "MIT",
+  "devDependencies": {
+    "jsonminify": "^0.4.1",
+    "node-env-file": "^0.1.8",
+    "node-twitter": "^0.5.3"
+  }
+}
