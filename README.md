@@ -23,7 +23,6 @@ Script requires hashtags as parameters:
 
 ```
 npm start -- hashtag1 hashtag2
-
 ```
 Example:
 
