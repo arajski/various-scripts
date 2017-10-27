@@ -2,9 +2,17 @@ var Twitter = require('node-twitter');
 var fs = require("fs");
 var jsonminify = require("jsonminify");
 var env = require('node-env-file');
+var mkdirp = require('mkdirp');
 env(__dirname + '/twitter.env');
 
 console.log("Connecting to Twitter API...");
+
+mkdirp('data', function(err){
+    if(err){
+        console.log("Could not create data folder");
+        process.exit();
+    } 
+});
 
 var twitterStreamClient = new Twitter.StreamClient(
   process.env.CONSUMER_KEY,
