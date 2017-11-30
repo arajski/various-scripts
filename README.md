@@ -11,7 +11,7 @@ Twitter Collector script is used to collect Tweets related to specific hashtags.
 To configure the script, first run the following commands:
 
 ```
-git clone http://github.com/rjsk/various-scripts/
+git clone http://github.com/arajski/various-scripts/
 cd various-scripts/twitterCollector
 npm install
 ```
